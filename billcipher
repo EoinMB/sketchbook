@@ -1,0 +1,13 @@
+def setup():
+    size(512, 512)
+    colorMode(HSB)
+    
+def draw():
+    fill(0, 0, 255)
+    circle(256, 264, 256)
+    fill(40, 255, 255)
+    triangle(256, 128, 128, 384, 384, 384)
+    fill(0, 0, 255)
+    ellipse(256, 256, 72, 40)
+    fill(0, 0, 0)
+    circle(256, 256, 40)
