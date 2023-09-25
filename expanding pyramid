@@ -1,0 +1,91 @@
+def setup():
+    size(512, 512)
+    colorMode(HSB)
+    #colorMode(RGB)
+    stroke(255)
+    
+    global r
+    
+    r = 0.5
+    
+    global x
+    global y
+    
+    global a
+    global b
+    
+    global c
+    global d
+    
+    global e
+    global f
+    
+    x = 256
+    y = 256
+    
+    a = 256
+    b = 256
+    
+    c = 256
+    d = 256
+    
+    e = 256
+    f = 256
+    
+    
+def draw():
+    #Grayscale
+    #RGB
+    #RGBA
+    background(0)
+    
+    #1
+    global x
+    global y
+    
+    circle(x, y, 4);
+    x = x + r
+    y = y + r
+    
+    #2
+    global a
+    global b
+
+    circle(a, b, 4);
+    a = a - r
+    b = b - r
+    
+    
+    #3
+    global c
+    global d
+    
+    circle(c, d, 4);
+    c = c + r
+    d = d - r
+    
+    #4
+    global e
+    global f
+    
+    circle(e, f, 4);
+    e = e - r
+    f = f + r
+    
+    circle(x, 256, 4);
+    circle(a, 256, 4);
+    circle(256, y, 4);
+    circle(256, b, 4);
+    circle(mouseX, mouseY, 8);
+    
+    line(x, y, c, d);
+    line(c, d, a, b);
+    line(a, b, e, f);
+    line(e, f, x, y);
+    
+    line(mouseX, mouseY, x, y);
+    line(mouseX, mouseY, a, b);
+    line(mouseX, mouseY, c, d);
+    line(mouseX, mouseY, e, f);
+
+
