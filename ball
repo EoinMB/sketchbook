@@ -1,0 +1,54 @@
+def setup():
+    size(512, 512)
+    
+    
+def draw():
+    background(100 ,100 ,255)
+    noStroke()
+    fill(255, 255, 0)
+    global x
+    global xdir
+
+    fill(200, 200, 0);
+    circle(x, y, w)
+    x = x + xdir
+    
+    if x == width:
+        xdir = -1
+        
+    if x == 0:
+        xdir = 1
+
+    
+    # < >
+    # ==
+    # <=
+    # >=
+    # and &&
+    # or ||
+    fill(0)
+    rect(width / 2 - 64, height / 2 - 32 , 128, 64)
+    fill(100, 100, 0)
+    
+
+    
+    
+    if (mouseX > width / 2 - 64 and mouseY > height / 2 - 32) and (mouseX < width / 2 + 64 and mouseY < height / 2 + 32):
+         fill(200, 200, 0)
+         rect(width / 2 - 64, height / 2 - 32 , 128, 64)
+         
+         fill(255, 255, 0)
+         circle(x, y, 64)
+
+    else:
+        fill(255, 255, 0)
+        rect(width / 2 - 64, height / 2 - 36 , 128, 64)
+        
+        
+            
+w = 50
+hw = w / 2
+x = hw
+y = 0
+xdir = 1
+
