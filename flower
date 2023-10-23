@@ -1,0 +1,62 @@
+
+def setup():
+    global cx, cy
+    global px, py
+    size(500, 500)
+    fullScreen()
+    cx = width / 2
+    cy = height /2
+    
+cx = 0
+cy = 0
+r = 150
+angle2 = 0
+    
+def draw():    
+    num = 30
+    bum = 5
+    theta = TWO_PI / num
+    
+    background(0)
+    strokeWeight(2)
+    translate(cx, cy)
+    noStroke()
+    noFill()
+    
+    for i in range(num):
+        angle = theta * i
+        pushMatrix()
+        rotate(angle)
+        stroke(255, 209, 0)
+        ellipse(0, 200, 150, 150)       
+        popMatrix()
+          
+        
+    for i in range(num):
+        angle = theta * i
+        pushMatrix()
+        rotate(angle)
+        stroke(255, 93, 255)
+        ellipse(0, 100, 100, 100)    
+        popMatrix()
+
+     
+    for i in range(num):
+        angle = theta * i
+        pushMatrix()
+        rotate(angle)
+        stroke(255, 255, 255)
+        ellipse(0, 200, 200, 100)    
+        popMatrix()
+        
+    for i in range(num):
+        angle = theta * i
+        pushMatrix()
+        rotate(angle)
+        stroke(255, 93, 255)
+        ellipse(0, 300, 300, 300)       
+        popMatrix()
+        
+    stroke(255, 255, 255)
+    circle(width, height, 50)
+          
