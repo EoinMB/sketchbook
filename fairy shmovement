@@ -1,0 +1,57 @@
+def setup():
+    size(1920, 1080)
+    fairy_y = height / 2
+    colorMode(HSB)
+    fullScreen()
+    
+w = 50
+hw = w / 2
+fairy_x = hw
+fairy_y = 0
+fairy_xdir = 4
+fairy_ydir = 4
+fairy_spd = 20
+fairy_wingy = 0
+fairy_wingdir = 1
+
+def draw():
+    global fairy_spd
+    global fairy_x
+    global fairy_y
+    global fairy_xdir
+    global fairy_ydir
+    global fairy_wingy
+    global fairy_wingdir
+    background(0)
+    noStroke()
+    ##wings##
+    fill(255);
+    ellipse(fairy_x-25, fairy_y, w, 25)
+    #fairyball##
+    fill(fairy_x / 8, 255, 255);
+    circle(fairy_x, fairy_y, w)
+    
+    
+    fairy_x = fairy_x + fairy_xdir
+    fairy_y = fairy_y + fairy_ydir
+    fairy_wingy = fairy_wingy + fairy_wingdir
+    
+    ##bounce##
+    if fairy_x >= width:
+        fairy_xdir = fairy_spd * -1
+        
+    if fairy_x <= 0:
+        fairy_xdir = fairy_spd
+        
+    if fairy_y >= height:
+        fairy_ydir = (fairy_spd * -1)/2
+        
+    if fairy_y <= 0:
+        fairy_ydir = (fairy_spd)/2
+        
+    ##wingflap##
+    if fairy_wingy >= fairy_y + 25:
+        fairy_wingdir = -1
+        
+    if fairy_wingy <= fairy_y - 25:
+        fairy_wingdir = 1
