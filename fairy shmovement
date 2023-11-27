@@ -27,6 +27,8 @@ def draw():
     ##wings##
     fill(255);
     ellipse(fairy_x-25, fairy_y, w, 25)
+    fill(255);
+    ellipse(fairy_x+25, fairy_y, w, 25)
     #fairyball##
     fill(fairy_x / 8, 255, 255);
     circle(fairy_x, fairy_y, w)
