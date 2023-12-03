@@ -10,7 +10,7 @@ fairy_x = hw
 fairy_y = 0
 fairy_xdir = 4
 fairy_ydir = 4
-fairy_spd = 20
+fairy_spd = 15
 fairy_wingy = 0
 fairy_wingdir = 1
 
@@ -48,10 +48,10 @@ def draw():
     if fairy_x <= 0:
         fairy_xdir = fairy_spd
         
-    if fairy_y >= height:
+    if fairy_y + 100>= height:
         fairy_ydir = (fairy_spd * -1)/2
         
-    if fairy_y <= 0:
+    if fairy_y + 100 <= 0:
         fairy_ydir = (fairy_spd)/2
         
     ##wingflap##
