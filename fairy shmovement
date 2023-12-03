@@ -26,12 +26,15 @@ def draw():
     noStroke()
     ##wings##
     fill(255);
-    ellipse(fairy_x-25, fairy_y, w, 25)
+    ellipse(fairy_x-25, (fairy_y + fairy_wingy)-15, w, 25)
     fill(255);
-    ellipse(fairy_x+25, fairy_y, w, 25)
+    ellipse(fairy_x+25, (fairy_y + fairy_wingy)-15, w, 25)
     #fairyball##
     fill(fairy_x / 8, 255, 255);
     circle(fairy_x, fairy_y, w)
+    
+    fill(fairy_x / 8, 255, 255, 50);
+    ellipse(fairy_x, fairy_y +100, w + 25, 25)
     
     
     fairy_x = fairy_x + fairy_xdir
@@ -52,8 +55,8 @@ def draw():
         fairy_ydir = (fairy_spd)/2
         
     ##wingflap##
-    if fairy_wingy >= fairy_y + 25:
-        fairy_wingdir = -1
+    if fairy_wingy >= 25 :
+        fairy_wingdir = -12.5
         
-    if fairy_wingy <= fairy_y - 25:
-        fairy_wingdir = 1
+    if fairy_wingy <= 25 :
+        fairy_wingdir = 12.5
